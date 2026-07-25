@@ -16,7 +16,7 @@
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
+  letter-spacing: 0.01em;
   color-scheme: light dark;
   color: var(--text);
   background: var(--bg);
@@ -59,7 +59,6 @@ body {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -74,25 +73,44 @@ h2 {
 }
 
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
+  font-size: 48px;
+  letter-spacing: 0.01em;
+  margin: 24px 0;
   @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+    font-size: 32px;
+    margin: 16px 0;
   }
 }
 h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
+  font-size: 22px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
   margin: 0 0 8px;
   @media (max-width: 1024px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 p {
   margin: 0;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+a:hover,
+a:focus-visible {
+  opacity: 1;
+  color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 code,
@@ -109,3 +127,4 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+

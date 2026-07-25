@@ -1,0 +1,21 @@
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+transform: translateX(-40px);
+}
+
+.projects-container {
+}
+
+#filter-button {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
