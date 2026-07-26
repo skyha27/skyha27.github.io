@@ -65,7 +65,7 @@ const FILTERS = [
   { id: "electronics", label: "Electronics", color: "#009999" },
   { id: "computer_graphics", label: "Computer Graphics", color: "#118613" },
   { id: "game_dev", label: "Game Development", color: "#898989" },
-  { id: "scripting", label: "Scripting", color: "#00ccff" },
+  { id: "scripting", label: "Pipeline", color: "#00ccff" },
   // add more, e.g. { id: "ml", label: "Machine Learning", color: "#F59E0B" },
 ];
 
@@ -222,7 +222,7 @@ export default function App() {
   // (FilterableItem) and the badge display (ProjectCard), instead of
   // repeating the same array literal twice.
   const meatSaverTags = ["game_dev", "cad", "electronics"];
-  const meshSlicerTags = ["game_dev", "computer_graphics"];
+  const meshSlicerTags = ["computer_graphics"];
   const raytracerTags = ["computer_graphics"];
 
   return (
@@ -299,11 +299,11 @@ export default function App() {
             />
           </FilterableItem>
 
-          <FilterableItem tags={["game_dev", "scripting"]} activeIds={activeIds}>
+          <FilterableItem tags={["game_dev"]} activeIds={activeIds}>
             <ProjectCard
               title="Briknite"
               description="Online multiplayer video game."
-              tags={["game_dev", "scripting"]}
+              tags={["game_dev"]}
               date="Aug 2021 - Dec 2021"
               software="Unity, C#, Photon"
             />
