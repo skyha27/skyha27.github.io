@@ -59,13 +59,13 @@ function CheckIcon({ className = "" }) {
 // `color` can be any hex value — it's used for the checkbox rectangle
 // and the matching tag shown on project cards.
 const FILTERS = [
-  { id: "cad", label: "CAD", color: "#ff9100" },
   { id: "animation", label: "Animation", color: "#4438a0" },
   { id: "technical_art", label: "Technical Art", color: "#e1ff00" },
-  { id: "electronics", label: "Electronics", color: "#009999" },
   { id: "computer_graphics", label: "Computer Graphics", color: "#118613" },
   { id: "game_dev", label: "Game Development", color: "#898989" },
   { id: "scripting", label: "Pipeline", color: "#00ccff" },
+  { id: "cad", label: "CAD", color: "#ff9100" },
+  { id: "electronics", label: "Electronics", color: "#009999" },
   // add more, e.g. { id: "ml", label: "Machine Learning", color: "#F59E0B" },
 ];
 
@@ -252,7 +252,7 @@ export default function App() {
               title="Mesh Slicer"
               description="Implemented a real-time Unity mesh slicing system operating directly on triangulated geometry, with applications in 3D printing, games, and animation."
               tags={meshSlicerTags}
-              date="May 2025 - Aug 2025"
+              date="May 2026 - Aug 2026"
               software="Unity, C#"
             />
           </FilterableItem>

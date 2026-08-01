@@ -4,8 +4,8 @@ import './NavBar.css'
 const NAV_LINKS = [
   { label: 'About', href: '/about' },
   { label: 'Projects', href: '/projects' },
-  { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Reel', href: 'https://your-reel-link.com', external: true },
+  { label: 'Sketchbook', href: '/portfolio' },
+  { label: 'Reel', href: 'https://vimeo.com/1148496002?fl=pl&fe=ti', external: true },
 ]
 
 export default function NavBar({ name = 'Your Name' }) {
