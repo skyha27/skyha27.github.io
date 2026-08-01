@@ -166,11 +166,12 @@ function ProjectCard({ title, description, tags, image, date, software }) {
     <div className="p-5 rounded-xl border border-gray-200 bg-white">
       <h3 className="font-semibold text-gray-900">{title}</h3>
       {date && <p className="text-xs text-gray-400 mt-0">{date}</p>}
-      <img
-        src={image || "https://placehold.co/400x200?text=Project+GIF"}
-        alt={title}
-        className="w-full rounded-lg mt-2 mb-2 object-cover"
-      />
+          <img
+      src={image || "https://placehold.co/400x200?text=Project+GIF"}
+      alt={title}
+      className="w-full rounded-lg mt-2 mb-2 object-cover"
+      style={{ height: "200px" }}
+    />
       <div className="flex flex-wrap gap-5">
         {tags.map((tag) => {
           const color = getFilterColor(tag);
@@ -190,7 +191,14 @@ function ProjectCard({ title, description, tags, image, date, software }) {
         })}
       </div>
       <p className="text-sm text-gray-600 mt-3">{description}</p>
-      {software && <p className="text-[11px] text-gray-400 mt-1">{software}</p>}
+      {software && (
+  <p
+    style={{ fontSize: "16px", fontWeight: "bold" }}
+    className="text-gray-400 mt-1"
+  >
+    {software}
+  </p>
+)}
     </div>
   );
 }
@@ -232,9 +240,9 @@ export default function App() {
           <FilterableItem tags={meatSaverTags} activeIds={activeIds}>
             <ProjectCard
               title="Meat Saver"
-              description="3d printed custom controllers... unity game."
+              description="Designed and 3D-printed custom game controllers, integrating Arduino hardware with a Unity game."
               tags={meatSaverTags}
-              date="May 2023 - Dec 2023"
+              date="May 2026 - Present"
               software="Unity, Blender, Arduino"
             />
           </FilterableItem>
@@ -242,7 +250,7 @@ export default function App() {
           <FilterableItem tags={meshSlicerTags} activeIds={activeIds}>
             <ProjectCard
               title="Mesh Slicer"
-              description="Custom unity program for slicing triangulated mesh in realtime. Applications include 3D printing, game dev, and animation."
+              description="Implemented a real-time Unity mesh slicing system operating directly on triangulated geometry, with applications in 3D printing, games, and animation."
               tags={meshSlicerTags}
               date="May 2025 - Aug 2025"
               software="Unity, C#"
@@ -254,58 +262,75 @@ export default function App() {
               title="Maya Render Queue Tool"
               description="Python-based rendering and shot-automation tool with dynamic queueing features."
               tags={["scripting"]}
-              date="Sep 2022 - Dec 2022"
+              date="Dec 2025"
               software="Maya, Python"
+              image={"src/assets/Maya Render Queue UI.png"}
             />
           </FilterableItem>
 
           <FilterableItem tags={["animation", "scripting"]} activeIds={activeIds}>
             <ProjectCard
               title="Pull U Once, Shame on Me"
-              description="3D animated student short film created in Maya."
+              description="Student film. Worked on rigging, pipeline, debugging, and character animation."
               tags={["animation", "scripting"]}
-              date="Sep 2022 - Dec 2022"
+              date="Sep 2025 - Dec 2025"
               software="Maya"
+              image={"src/assets/pull_u_img.png"}
             />
           </FilterableItem>
 
           <FilterableItem tags={["computer_graphics", "technical_art"]} activeIds={activeIds}>
             <ProjectCard
-              title="Fluid Fire Particle System"
+              title="Fire Particle System"
               description="OpenGL implementation of a fire particle system including heat transfer dynamics."
               tags={["computer_graphics", "technical_art"]}
               date="Nov 2025 - Dec 2025"
               software="C++, OpenGL, GLSL"
+              image={"src/assets/fire.png"}
             />
           </FilterableItem>
 
           <FilterableItem tags={raytracerTags} activeIds={activeIds}>
             <ProjectCard
               title="C++ Raytracer"
-              description="Custom C++ raytracer supporting triangle meshes, primative shapes, Phong illumination, recursive reflections, multithreading, and anti-aliasing."
+              description="Built a multithreaded C++ raytracer supporting triangle meshes, primitive shapes, Phong illumination, recursive reflections, and anti-aliasing."
               tags={raytracerTags}
               date="Sept 2025 - Nov 2025"
               software="C++"
+              image={"src/assets/raytracer_img1.png"}
+            />
+          </FilterableItem>
+
+          <FilterableItem tags={["computer_graphics"]} activeIds={activeIds}>
+            <ProjectCard
+              title="Brush Drawing Application"
+              description="Raster drawing application built for a Computer Graphics course, featuring constant, linear, quadratic, and smudge brushes."
+              tags={["computer_graphics"]}
+              date="Sept 2025"
+              software="C++, Qt"
+              image={"src/assets/raster_img.png"}
             />
           </FilterableItem>
 
           <FilterableItem tags={["animation", "scripting"]} activeIds={activeIds}>
             <ProjectCard
               title="Sit Next to Me"
-              description="Short animated music video created in Blender."
+              description="Short animated music video created in Blender. Involved in animation, shading, lighting, and scripting for the project pipeline."
               tags={["animation", "scripting"]}
               date="June 2025 - July 2025"
               software="Blender, Python"
+              image={"src/assets/sit_next_to_me_drummer.png"}
             />
           </FilterableItem>
 
-          <FilterableItem tags={["game_dev"]} activeIds={activeIds}>
+          <FilterableItem tags={["game_dev", "animation"]} activeIds={activeIds}>
             <ProjectCard
               title="Briknite"
-              description="Online multiplayer video game. Personal project attempt to recreate Fortnite with a LEGO aesthetic."
-              tags={["game_dev"]}
+              description="Online multiplayer video game. Personal project attempt to recreate Fortnite with a LEGO aesthetic. Created custom player animations."
+              tags={["game_dev", "animation"]}
               date="Aug 2024 - Dec 2024"
               software="Unity, C#, Blender"
+              image={"src/assets/briknite_img1.jpeg"}
             />
           </FilterableItem>
         </div>
