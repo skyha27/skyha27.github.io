@@ -222,7 +222,7 @@ export default function App() {
   // (FilterableItem) and the badge display (ProjectCard), instead of
   // repeating the same array literal twice.
   const meatSaverTags = ["game_dev", "cad", "electronics"];
-  const meshSlicerTags = ["computer_graphics"];
+  const meshSlicerTags = ["computer_graphics", "technical_art"];
   const raytracerTags = ["computer_graphics"];
 
   return (
@@ -242,9 +242,9 @@ export default function App() {
           <FilterableItem tags={meshSlicerTags} activeIds={activeIds}>
             <ProjectCard
               title="Mesh Slicer"
-              description="Unity mesh slicer."
+              description="Custom unity program for slicing triangulated mesh in realtime. Applications include 3D printing, game dev, and animation."
               tags={meshSlicerTags}
-              date="Jan 2023 - Mar 2023"
+              date="May 2025 - Aug 2025"
               software="Unity, C#"
             />
           </FilterableItem>
@@ -252,29 +252,29 @@ export default function App() {
           <FilterableItem tags={["scripting"]} activeIds={activeIds}>
             <ProjectCard
               title="Maya Render Queue Tool"
-              description="Python-based rendering and shot-automation tool with dynamic queue features."
+              description="Python-based rendering and shot-automation tool with dynamic queueing features."
               tags={["scripting"]}
               date="Sep 2022 - Dec 2022"
-              software="Maya, Python, PyQt"
+              software="Maya, Python"
             />
           </FilterableItem>
 
           <FilterableItem tags={["animation", "scripting"]} activeIds={activeIds}>
             <ProjectCard
               title="Pull U Once, Shame on Me"
-              description="Student Film Animation. 3D animation short film created in Maya."
+              description="3D animated student short film created in Maya."
               tags={["animation", "scripting"]}
               date="Sep 2022 - Dec 2022"
-              software="Maya, Python, PyQt"
+              software="Maya"
             />
           </FilterableItem>
 
           <FilterableItem tags={["computer_graphics", "technical_art"]} activeIds={activeIds}>
             <ProjectCard
               title="Fluid Fire Particle System"
-              description="OPEN_GL implementation of a fluid fire particle system."
+              description="OpenGL implementation of a fire particle system including heat transfer dynamics."
               tags={["computer_graphics", "technical_art"]}
-              date="Mar 2022 - May 2022"
+              date="Nov 2025 - Dec 2025"
               software="C++, OpenGL, GLSL"
             />
           </FilterableItem>
@@ -282,30 +282,30 @@ export default function App() {
           <FilterableItem tags={raytracerTags} activeIds={activeIds}>
             <ProjectCard
               title="C++ Raytracer"
-              description="Custom C++ raytracer with multithreading and..."
+              description="Custom C++ raytracer supporting triangle meshes, primative shapes, Phong illumination, recursive reflections, multithreading, and anti-aliasing."
               tags={raytracerTags}
-              date="Jan 2022 - Feb 2022"
+              date="Sept 2025 - Nov 2025"
               software="C++"
             />
           </FilterableItem>
 
-                    <FilterableItem tags={["animation", "scripting"]} activeIds={activeIds}>
+          <FilterableItem tags={["animation", "scripting"]} activeIds={activeIds}>
             <ProjectCard
               title="Sit Next to Me"
-              description="Blender... debugging"
+              description="Short animated music video created in Blender."
               tags={["animation", "scripting"]}
-              date="Sep 2022 - Dec 2022"
-              software="Blender, Python, PyQt"
+              date="June 2025 - July 2025"
+              software="Blender, Python"
             />
           </FilterableItem>
 
           <FilterableItem tags={["game_dev"]} activeIds={activeIds}>
             <ProjectCard
               title="Briknite"
-              description="Online multiplayer video game."
+              description="Online multiplayer video game. Personal project attempt to recreate Fortnite with a LEGO aesthetic."
               tags={["game_dev"]}
-              date="Aug 2021 - Dec 2021"
-              software="Unity, C#, Photon"
+              date="Aug 2024 - Dec 2024"
+              software="Unity, C#, Blender"
             />
           </FilterableItem>
         </div>
