@@ -250,7 +250,7 @@ export default function App() {
           <FilterableItem tags={meshSlicerTags} activeIds={activeIds}>
             <ProjectCard
               title="Mesh Slicer"
-              description="Implemented a real-time Unity mesh slicing system operating on triangulated geometry."
+              description="Implemented a real-time Unity mesh slicing system that operates on triangulated geometry."
               tags={meshSlicerTags}
               date="May 2026 - Aug 2026"
               software="Unity, C#"
@@ -272,7 +272,7 @@ export default function App() {
           <FilterableItem tags={["animation", "scripting"]} activeIds={activeIds}>
             <ProjectCard
               title="Pull U Once, Shame on Me"
-              description="Student film. Worked on rigging, pipeline, debugging, and character animation."
+              description="Student film. Worked on rigging, pipeline debugging, and character animation."
               tags={["animation", "scripting"]}
               date="Sep 2025 - Dec 2025"
               software="Maya"
@@ -294,7 +294,7 @@ export default function App() {
           <FilterableItem tags={raytracerTags} activeIds={activeIds}>
             <ProjectCard
               title="C++ Raytracer"
-              description="Built a multithreaded C++ raytracer supporting triangle meshes, primitive shapes, Phong illumination, recursive reflections, and anti-aliasing."
+              description="Built a multithreaded C++ raytracer supporting triangulated mesh, primitive shapes, Phong illumination, recursive reflections, and anti-aliasing."
               tags={raytracerTags}
               date="Sept 2025 - Nov 2025"
               software="C++"
@@ -316,7 +316,7 @@ export default function App() {
           <FilterableItem tags={["animation", "scripting"]} activeIds={activeIds}>
             <ProjectCard
               title="Sit Next to Me"
-              description="Short animated music video created in Blender. Involved in animation, shading, lighting, and scripting for the project pipeline."
+              description="Animated music video. Involved in animation, shading, lighting, and scripting."
               tags={["animation", "scripting"]}
               date="June 2025 - July 2025"
               software="Blender, Python"
@@ -327,7 +327,7 @@ export default function App() {
           <FilterableItem tags={["game_dev", "animation"]} activeIds={activeIds}>
             <ProjectCard
               title="Briknite"
-              description="Online multiplayer video game. Personal project attempt to recreate Fortnite with a LEGO aesthetic. Created custom player animations."
+              description="Online multiplayer video game. Created custom player animations."
               tags={["game_dev", "animation"]}
               date="Aug 2024 - Dec 2024"
               software="Unity, C#, Blender"
