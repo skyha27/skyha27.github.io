@@ -229,7 +229,7 @@ export default function App() {
   // Each project's tags are defined once and reused for both filtering
   // (FilterableItem) and the badge display (ProjectCard), instead of
   // repeating the same array literal twice.
-  const meatSaverTags = ["game_dev", "cad", "electronics"];
+  const beattSaberTags = ["game_dev", "cad", "electronics"];
   const meshSlicerTags = ["computer_graphics", "technical_art"];
   const raytracerTags = ["computer_graphics"];
 
@@ -237,11 +237,11 @@ export default function App() {
       <div className="projects-container">
           <FilterDropdown activeIds={activeIds} onToggle={toggleFilter} />
         <div className="project-grid">
-          <FilterableItem tags={meatSaverTags} activeIds={activeIds}>
+          <FilterableItem tags={beattSaberTags} activeIds={activeIds}>
             <ProjectCard
-              title="Meat Saver"
+              title="Beat Saber Controller"
               description="Designed and 3D-printed custom game controllers, integrating Arduino hardware with a Unity game."
-              tags={meatSaverTags}
+              tags={beattSaberTags}
               date="May 2026 - Present"
               software="Unity, Blender, Arduino"
             />
@@ -250,7 +250,7 @@ export default function App() {
           <FilterableItem tags={meshSlicerTags} activeIds={activeIds}>
             <ProjectCard
               title="Mesh Slicer"
-              description="Implemented a real-time Unity mesh slicing system operating directly on triangulated geometry, with applications in 3D printing, games, and animation."
+              description="Implemented a real-time Unity mesh slicing system operating on triangulated geometry."
               tags={meshSlicerTags}
               date="May 2026 - Aug 2026"
               software="Unity, C#"

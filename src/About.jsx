@@ -5,10 +5,10 @@ export default function About() {
     <div style={{ padding: '40px 24px' }}>
       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: 40 }}>
         <div style={{ width: '60%', maxWidth: 1100, minWidth: 320, textAlign: 'left', display: 'flex', flexDirection: 'column', gap: 20, paddingTop: 80 }}>
-          <p>Hi! My name is Skyler Hall, but most people call me Sky. I'm a current junior at Brown University studying Computer Engineering, with a passion for combining creativity and technology.</p>
-          <p>Through coursework and personal projects, I've gained experience debugging issues in 3D animation and game development pipelines using scripts and tools, alongside general software development. </p>
+          <p>Hi! My name is Skyler Hall, but most people call me Sky. I'm a current Junior at Brown University studying Computer Engineering, with a passion for combining creativity and technology.</p>
+          <p>I am interested in the intersection of technical problem solving and creative development, particularly in animation, games, and themed entertainment. Through coursework and personal projects, I've explored both sides by building tools, debugging issues, and experiementing with various creative mediums. </p>
           <p>Most recently, I worked as an intern for Universal Creative, working on tools and softwares to support themed entertainment experiences.</p>
-          <p>In my free time, I love playing video games, and going to the movies!</p>
+          <p>In my free time, I love playing video games and going to the movies!</p>
         </div>
 
         <div style={{ flex: 1, minWidth: 200 }}>
