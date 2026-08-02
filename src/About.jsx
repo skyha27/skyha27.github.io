@@ -8,7 +8,7 @@ export default function About() {
           <p>Hi! My name is Skyler Hall, but most people call me Sky. I'm a current junior at Brown University studying Computer Engineering, with a passion for combining creativity and technology.</p>
           <p>Through coursework and personal projects, I've gained experience debugging issues in 3D animation and game development pipelines using scripts and tools, alongside general software development. </p>
           <p>Most recently, I worked as an intern for Universal Creative, working on tools and softwares to support themed entertainment experiences.</p>
-          <p>In my free time, I love working on personal coding and animation projects, playing video games, and going to the movies!</p>
+          <p>In my free time, I love playing video games, and going to the movies!</p>
         </div>
 
         <div style={{ flex: 1, minWidth: 200 }}>

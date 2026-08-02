@@ -254,6 +254,7 @@ export default function App() {
               tags={meshSlicerTags}
               date="May 2026 - Aug 2026"
               software="Unity, C#"
+              image={"src/assets/Mesh Slicer Demo.gif"}
             />
           </FilterableItem>
 
