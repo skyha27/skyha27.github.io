@@ -3,6 +3,7 @@ import NavBar from './NavBar.jsx'
 import Projects from './Projects.jsx'
 import Portfolio from './portfolio.jsx'
 import About from './About.jsx'
+import NotFound from './NotFound.jsx'
 
 export default function App() {
   return (
@@ -13,7 +14,7 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about" element={<About />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   )

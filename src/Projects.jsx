@@ -272,7 +272,7 @@ export default function App() {
           <FilterableItem tags={["animation", "scripting"]} activeIds={activeIds}>
             <ProjectCard
               title="Pull U Once, Shame on Me"
-              description="Student film. Worked on rigging, pipeline debugging, and character animation."
+              description="Student film. Worked on rigging, debugging, and character animation."
               tags={["animation", "scripting"]}
               date="Sep 2025 - Dec 2025"
               software="Maya"
@@ -327,7 +327,7 @@ export default function App() {
           <FilterableItem tags={["game_dev", "animation"]} activeIds={activeIds}>
             <ProjectCard
               title="Briknite"
-              description="Online multiplayer video game. Created custom player animations."
+              description="Online multiplayer video game. Worked on player and gameplay scripts in addition to creating custom player animations."
               tags={["game_dev", "animation"]}
               date="Aug 2024 - Dec 2024"
               software="Unity, C#, Blender"
