@@ -38,6 +38,25 @@ function CheckIcon({ className = "" }) {
   );
 }
 
+function ArrowUpRightIcon({ className = "" }) {
+  return (
+    <svg
+      className={className}
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="7" y1="17" x2="17" y2="7" />
+      <polyline points="7 7 17 7 17 17" />
+    </svg>
+  );
+}
+
 /*
   SIMPLE PORTFOLIO FILTER TEMPLATE
   ---------------------------------
@@ -53,6 +72,8 @@ function CheckIcon({ className = "" }) {
      that matches an active filter.
   4. Swap out the sample cards in <App> for your own project components —
      just keep the tags prop matching ids from FILTERS.
+  5. Give each ProjectCard a `link` prop (a real URL) to show a "Learn more"
+     button. Cards without a `link` simply won't show the button.
 */
 
 // 1. Define your filters here. Add as many as you want.
@@ -106,6 +127,7 @@ function FilterDropdown({ activeIds, onToggle }) {
     <div>
       <button
         id="filter-button"
+        className="action-button"
         onClick={() => setOpen((o) => !o)}      >
         Show Filters
         <ChevronDownIcon className={`transition-transform ${open ? "rotate-180" : ""}`} />
@@ -161,11 +183,20 @@ function FilterableItem({ tags = [], activeIds, children }) {
 
 // --- Example content component ----------------------------------------
 
-function ProjectCard({ title, description, tags, image, date, software }) {
+function ProjectCard({ title, description, tags, image, date, software, link, linkText = "Learn more" }) {
   return (
-    <div className="p-5 rounded-xl border border-gray-200 bg-white">
-      <h3 className="font-semibold text-gray-900">{title}</h3>
-      {date && <p className="text-xs text-gray-400 mt-0">{date}</p>}
+    <div
+      className="p-5 rounded-xl border border-gray-200 bg-white"
+      style={{ textAlign: "left" }}
+    >
+      <h3 className="font-semibold text-gray-900" style={{ textAlign: "left" }}>
+        {title}
+      </h3>
+      {date && (
+        <p className="text-xs text-gray-400 mt-0" style={{ textAlign: "left" }}>
+          {date}
+        </p>
+      )}
           <img
       src={image || "https://placehold.co/400x200?text=Project+GIF"}
       alt={title}
@@ -190,15 +221,36 @@ function ProjectCard({ title, description, tags, image, date, software }) {
           );
         })}
       </div>
-      <p className="text-sm text-gray-600 mt-3">{description}</p>
+      <p className="text-sm text-gray-600 mt-3" style={{ textAlign: "left" }}>
+        {description}
+      </p>
       {software && (
-  <p
-    style={{ fontSize: "16px", fontWeight: "bold" }}
-    className="text-gray-400 mt-1"
-  >
-    {software}
-  </p>
-)}
+        <p
+          style={{ fontSize: "16px", fontWeight: "bold", textAlign: "left" }}
+          className="text-gray-400 mt-1"
+        >
+          {software}
+        </p>
+      )}
+      {link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="action-button learn-more-button"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "6px",
+            marginTop: "14px",
+            textDecoration: "none",
+            width: "fit-content",
+          }}
+        >
+          {linkText}
+          <ArrowUpRightIcon />
+        </a>
+      )}
     </div>
   );
 }
@@ -226,35 +278,30 @@ export default function App() {
     );
   }, []);
 
-  // Each project's tags are defined once and reused for both filtering
-  // (FilterableItem) and the badge display (ProjectCard), instead of
-  // repeating the same array literal twice.
-  const beattSaberTags = ["game_dev", "cad", "electronics"];
-  const meshSlicerTags = ["computer_graphics", "technical_art"];
-  const raytracerTags = ["computer_graphics"];
-
   return (
       <div className="projects-container">
           <FilterDropdown activeIds={activeIds} onToggle={toggleFilter} />
         <div className="project-grid">
-          <FilterableItem tags={beattSaberTags} activeIds={activeIds}>
+          <FilterableItem tags={["game_dev", "cad", "electronics"]} activeIds={activeIds}>
             <ProjectCard
               title="Beat Saber Controller"
               description="Designed and 3D-printed custom game controllers, integrating Arduino hardware with a Unity game."
-              tags={beattSaberTags}
+              tags={["game_dev", "cad", "electronics"]}
               date="May 2026 - Present"
               software="Unity, Blender, Arduino"
             />
           </FilterableItem>
 
-          <FilterableItem tags={meshSlicerTags} activeIds={activeIds}>
+          <FilterableItem tags={["computer_graphics", "technical_art"]} activeIds={activeIds}>
             <ProjectCard
               title="Mesh Slicer"
               description="Implemented a real-time Unity mesh slicing system that operates on triangulated geometry."
-              tags={meshSlicerTags}
+              tags={["computer_graphics", "technical_art"]}
               date="May 2026 - Aug 2026"
               software="Unity, C#"
               image={"src/assets/Mesh Slicer Demo.gif"}
+              link="https://github.com/skyha27/mesh-slicer-2026-05-23_11-52-17"
+              linkText="Github"
             />
           </FilterableItem>
 
@@ -266,6 +313,8 @@ export default function App() {
               date="Dec 2025"
               software="Maya, Python"
               image={"src/assets/Maya Render Queue UI.png"}
+              link="https://github.com/skyha27/Maya-Render-Queue-Tool"
+              linkText="Github"
             />
           </FilterableItem>
 
@@ -277,6 +326,8 @@ export default function App() {
               date="Sep 2025 - Dec 2025"
               software="Maya"
               image={"src/assets/pull_u_img.png"}
+              link="https://vimeo.com/1149354401?share=copy&fl=cl&fe=ci"
+              linkText="Watch here"
             />
           </FilterableItem>
 
@@ -291,11 +342,11 @@ export default function App() {
             />
           </FilterableItem>
 
-          <FilterableItem tags={raytracerTags} activeIds={activeIds}>
+          <FilterableItem tags={["computer_graphics"]} activeIds={activeIds}>
             <ProjectCard
               title="C++ Raytracer"
               description="Built a multithreaded C++ raytracer supporting triangulated mesh, primitive shapes, Phong illumination, recursive reflections, and anti-aliasing."
-              tags={raytracerTags}
+              tags={["computer_graphics"]}
               date="Sept 2025 - Nov 2025"
               software="C++"
               image={"src/assets/raytracer_img1.png"}
@@ -310,17 +361,21 @@ export default function App() {
               date="Sept 2025"
               software="C++, Qt"
               image={"src/assets/raster_img.png"}
+              link="https://github.com/BrownCSCI1230/proj1-skyha27"
+              linkText="Github"
             />
           </FilterableItem>
 
           <FilterableItem tags={["scripting"]} activeIds={activeIds}>
             <ProjectCard
-              title="Viewport Scripting Tool"
+              title="Blender Shot Recovery Script"
               description="Scripting tool to automate viewport screenshoting to recover animation from corrupted files."
               tags={["scripting"]}
               date="June 2025 - July 2025"
               software="Blender, Python"
-              // image={"src/assets/sit_next_to_me_drummer.png"}
+              image={"src/assets/blender-shot-fix.png"}
+              link="https://github.com/skyha27/Blender-Shot-Recovery-Script"
+              linkText="Github"
             />
           </FilterableItem>
 
@@ -332,6 +387,8 @@ export default function App() {
               date="June 2025 - July 2025"
               software="Blender"
               image={"src/assets/sit_next_to_me_drummer.png"}
+              link="https://drive.google.com/file/d/1CEiN2C0LG0xa2RYXYPv8W8rDDeXRxk3a/view?usp=sharing"
+              linkText="Watch here"
             />
           </FilterableItem>
 
@@ -354,6 +411,8 @@ export default function App() {
               date="Dec 2023"
               software="Arduino, JavaScript"
               // image={"src/assets/briknite_img1.jpeg"}
+              link="#"
+              linkText="TODO: link -View the demo"
             />
           </FilterableItem>
         </div>

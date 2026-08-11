@@ -8,6 +8,28 @@ transform: translateX(-40px);
 .projects-container {
 }
 
+/* Shared style for the "Show Filters" button and each project's
+   Learn more / Watch here / etc. button, so they always match and
+   stay visible regardless of the surrounding page being light or dark. */
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #e5e7eb;
+  color: #111827;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.15s ease;
+}
+
+.action-button:hover {
+  background-color: #d1d5db;
+}
+
 #filter-button {
   border: none;
   border-radius: 30px;
