@@ -1,14 +1,14 @@
 const images = [
-  { src: 'src/assets/sketchbook/gesture_1.png', alt: 'Image 1' },
-  { src: 'src/assets/sketchbook/gesture_2.png', alt: 'Image 2' },
-  { src: 'src/assets/sketchbook/cartoon_king.png', alt: 'Image 3' },
+  { src: 'public/images/sketchbook/gesture_1.png', alt: 'Image 1' },
+  { src: 'public/images/sketchbook/gesture_2.png', alt: 'Image 2' },
+  { src: 'public/images/sketchbook/cartoon_king.png', alt: 'Image 3' },
 
-  { src: 'src/assets/sketchbook/axle_angry.png', alt: 'Image 4' },
-  { src: 'src/assets/sketchbook/psylocke.png', alt: 'Image 5' },
-  { src: 'src/assets/sketchbook/jubilee.png', alt: 'Image 6' },
+  { src: 'public/images/sketchbook/axle_angry.png', alt: 'Image 4' },
+  { src: 'public/images/sketchbook/psylocke.png', alt: 'Image 5' },
+  { src: 'public/images/sketchbook/jubilee.png', alt: 'Image 6' },
 
-  { src: 'src/assets/sketchbook/rio_face.png', alt: 'Image 7' },
-  { src: 'src/assets/sketchbook/sweatshirt.png', alt: 'Image 8' },
+  { src: 'public/images/sketchbook/rio_face.png', alt: 'Image 7' },
+  { src: 'public/images/sketchbook/sweatshirt.png', alt: 'Image 8' },
 ]
 
 export default function About() {
