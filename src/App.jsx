@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import NavBar from './NavBar.jsx'
 import Projects from './Projects.jsx'
-import Portfolio from './portfolio.jsx'
+import Portfolio from './Portfolio.jsx'
 import About from './About.jsx'
 import NotFound from './NotFound.jsx'
 
