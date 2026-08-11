@@ -63,7 +63,7 @@ const FILTERS = [
   { id: "technical_art", label: "Technical Art", color: "#e1ff00" },
   { id: "computer_graphics", label: "Computer Graphics", color: "#118613" },
   { id: "game_dev", label: "Game Development", color: "#898989" },
-  { id: "scripting", label: "Pipeline", color: "#00ccff" },
+  { id: "scripting", label: "Tool Projects", color: "#00ccff" },
   { id: "cad", label: "CAD", color: "#ff9100" },
   { id: "electronics", label: "Electronics", color: "#009999" },
   // add more, e.g. { id: "ml", label: "Machine Learning", color: "#F59E0B" },
@@ -269,11 +269,11 @@ export default function App() {
             />
           </FilterableItem>
 
-          <FilterableItem tags={["animation", "scripting"]} activeIds={activeIds}>
+          <FilterableItem tags={["animation"]} activeIds={activeIds}>
             <ProjectCard
               title="Pull U Once, Shame on Me"
               description="Student film. Worked on rigging, debugging, and character animation."
-              tags={["animation", "scripting"]}
+              tags={["animation"]}
               date="Sep 2025 - Dec 2025"
               software="Maya"
               image={"src/assets/pull_u_img.png"}
@@ -313,11 +313,11 @@ export default function App() {
             />
           </FilterableItem>
 
-          <FilterableItem tags={["animation", "scripting"]} activeIds={activeIds}>
+          <FilterableItem tags={["animation"]} activeIds={activeIds}>
             <ProjectCard
               title="Sit Next to Me"
               description="Animated music video. Involved in animation, shading, lighting, and scripting."
-              tags={["animation", "scripting"]}
+              tags={["animation"]}
               date="June 2025 - July 2025"
               software="Blender, Python"
               image={"src/assets/sit_next_to_me_drummer.png"}
