@@ -403,7 +403,7 @@ export default function App() {
             />
           </FilterableItem>
 
-          <FilterableItem tags={["electronics"]} activeIds={activeIds}>
+          {/* <FilterableItem tags={["electronics"]} activeIds={activeIds}>
             <ProjectCard
               title="Voice Controlled Nintendo Switch"
               description="Voice-controlled interface to play Super Smash Bros natively on a Nintendo Switch console."
@@ -414,7 +414,7 @@ export default function App() {
               link="#"
               linkText="TODO: link -View the demo"
             />
-          </FilterableItem>
+          </FilterableItem> */}
         </div>
       </div>
   );
