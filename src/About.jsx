@@ -13,7 +13,7 @@ export default function About() {
 
         <div style={{ flex: 1, minWidth: 200 }}>
           <img
-            src="public/images/sky.jpeg"
+            src="/images/sky.jpeg"
             alt="Skyler Hall"
             style={{ width: '100%', height: 'auto', borderRadius: 200 }}
           />
@@ -22,13 +22,13 @@ export default function About() {
 
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 24, padding: '24px 0' }}>
         <a href="https://www.linkedin.com/in/skylerghall/" target="_blank" rel="noopener noreferrer">
-          <img src="/images/linkedin_logo.png" alt="LinkedIn" style={{ width: 28, height: 28 }} />
+          <img src="/images/logos/linkedin_logo.png" alt="LinkedIn" style={{ width: 28, height: 28 }} />
         </a>
         <a href="https://github.com/skyha27" target="_blank" rel="noopener noreferrer">
-          <img src="/images/github_logo.png" alt="GitHub" style={{ width: 28, height: 28 }} />
+          <img src="/images/logos/github_logo.png" alt="GitHub" style={{ width: 28, height: 28 }} />
         </a>
         <a href="https://vimeo.com/1148496002?fl=pl&fe=ti" target="_blank" rel="noopener noreferrer">
-          <img src="/images/vimeo_logo.png" alt="Vimeo" style={{ width: 28, height: 28 }} />
+          <img src="/images/logos/vimeo_logo.png" alt="Vimeo" style={{ width: 28, height: 28 }} />
         </a>
       </div>
     </div>
