@@ -60,10 +60,10 @@ function CheckIcon({ className = "" }) {
 // and the matching tag shown on project cards.
 const FILTERS = [
   { id: "animation", label: "Animation", color: "#4438a0" },
+  { id: "scripting", label: "Tool Projects", color: "#00ccff" },
   { id: "technical_art", label: "Technical Art", color: "#e1ff00" },
   { id: "computer_graphics", label: "Computer Graphics", color: "#118613" },
   { id: "game_dev", label: "Game Development", color: "#898989" },
-  { id: "scripting", label: "Tool Projects", color: "#00ccff" },
   { id: "cad", label: "CAD", color: "#ff9100" },
   { id: "electronics", label: "Electronics", color: "#009999" },
   // add more, e.g. { id: "ml", label: "Machine Learning", color: "#F59E0B" },
@@ -287,7 +287,7 @@ export default function App() {
               tags={["computer_graphics", "technical_art"]}
               date="Nov 2025 - Dec 2025"
               software="C++, OpenGL, GLSL"
-              image={"src/assets/fire.png"}
+              image={"src/assets/Fire_Sim_Demo.gif"}
             />
           </FilterableItem>
 
@@ -313,25 +313,47 @@ export default function App() {
             />
           </FilterableItem>
 
+          <FilterableItem tags={["scripting"]} activeIds={activeIds}>
+            <ProjectCard
+              title="Viewport Scripting Tool"
+              description="Scripting tool to automate viewport screenshoting to recover animation from corrupted files."
+              tags={["scripting"]}
+              date="June 2025 - July 2025"
+              software="Blender, Python"
+              // image={"src/assets/sit_next_to_me_drummer.png"}
+            />
+          </FilterableItem>
+
           <FilterableItem tags={["animation"]} activeIds={activeIds}>
             <ProjectCard
               title="Sit Next to Me"
               description="Animated music video. Involved in animation, shading, lighting, and scripting."
               tags={["animation"]}
               date="June 2025 - July 2025"
-              software="Blender, Python"
+              software="Blender"
               image={"src/assets/sit_next_to_me_drummer.png"}
             />
           </FilterableItem>
 
-          <FilterableItem tags={["game_dev", "animation"]} activeIds={activeIds}>
+          <FilterableItem tags={["game_dev"]} activeIds={activeIds}>
             <ProjectCard
               title="Briknite"
               description="Online multiplayer video game. Worked on player and gameplay scripts in addition to creating custom player animations."
-              tags={["game_dev", "animation"]}
+              tags={["game_dev"]}
               date="Aug 2024 - Dec 2024"
               software="Unity, C#, Blender"
               image={"src/assets/briknite_img1.jpeg"}
+            />
+          </FilterableItem>
+
+          <FilterableItem tags={["electronics"]} activeIds={activeIds}>
+            <ProjectCard
+              title="Voice Controlled Nintendo Switch"
+              description="Voice-controlled interface to play Super Smash Bros natively on a Nintendo Switch console."
+              tags={["electronics"]}
+              date="Dec 2023"
+              software="Arduino, JavaScript"
+              // image={"src/assets/briknite_img1.jpeg"}
             />
           </FilterableItem>
         </div>
