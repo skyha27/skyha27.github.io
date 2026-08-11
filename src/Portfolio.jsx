@@ -11,7 +11,7 @@ const images = [
   { src: '/images/sketchbook/sweatshirt.png', alt: 'Image 8' },
 ]
 
-export default function About() {
+export default function Portfolio() {
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 20, padding: 20, justifyContent: 'space-between' }}>
       {images.map((img) => (

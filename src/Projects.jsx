@@ -299,7 +299,7 @@ export default function App() {
               tags={["computer_graphics", "technical_art"]}
               date="May 2026 - Aug 2026"
               software="Unity, C#"
-              image={"public/images/Mesh Slicer Demo.gif"}
+              image={"/images/Mesh Slicer Demo.gif"}
               link="https://github.com/skyha27/mesh-slicer-2026-05-23_11-52-17"
               linkText="Github"
             />
@@ -312,7 +312,7 @@ export default function App() {
               tags={["scripting"]}
               date="Dec 2025"
               software="Maya, Python"
-              image={"public/images/Maya Render Queue UI.png"}
+              image={"/images/Maya Render Queue UI.png"}
               link="https://github.com/skyha27/Maya-Render-Queue-Tool"
               linkText="Github"
             />
@@ -325,7 +325,7 @@ export default function App() {
               tags={["animation"]}
               date="Sep 2025 - Dec 2025"
               software="Maya"
-              image={"public/images/pull_u_img.png"}
+              image={"/images/pull_u_img.png"}
               link="https://vimeo.com/1149354401?share=copy&fl=cl&fe=ci"
               linkText="Watch here"
             />
@@ -338,7 +338,7 @@ export default function App() {
               tags={["computer_graphics", "technical_art"]}
               date="Nov 2025 - Dec 2025"
               software="C++, OpenGL, GLSL"
-              image={"public/images/Fire_Sim_Demo.gif"}
+              image={"/images/Fire_Sim_Demo.gif"}
             />
           </FilterableItem>
 
@@ -349,7 +349,7 @@ export default function App() {
               tags={["computer_graphics"]}
               date="Sept 2025 - Nov 2025"
               software="C++"
-              image={"public/images/raytracer_img1.png"}
+              image={"/images/raytracer_img1.png"}
             />
           </FilterableItem>
 
@@ -360,7 +360,7 @@ export default function App() {
               tags={["computer_graphics"]}
               date="Sept 2025"
               software="C++, Qt"
-              image={"public/images/raster_img.png"}
+              image={"/images/raster_img.png"}
               link="https://github.com/BrownCSCI1230/proj1-skyha27"
               linkText="Github"
             />
@@ -373,7 +373,7 @@ export default function App() {
               tags={["scripting"]}
               date="June 2025 - July 2025"
               software="Blender, Python"
-              image={"public/images/blender-shot-fix.png"}
+              image={"/images/blender-shot-fix.png"}
               link="https://github.com/skyha27/Blender-Shot-Recovery-Script"
               linkText="Github"
             />
@@ -386,7 +386,7 @@ export default function App() {
               tags={["animation"]}
               date="June 2025 - July 2025"
               software="Blender"
-              image={"public/images/sit_next_to_me_drummer.png"}
+              image={"/images/sit_next_to_me_drummer.png"}
               link="https://drive.google.com/file/d/1CEiN2C0LG0xa2RYXYPv8W8rDDeXRxk3a/view?usp=sharing"
               linkText="Watch here"
             />
@@ -399,7 +399,7 @@ export default function App() {
               tags={["game_dev"]}
               date="Aug 2024 - Dec 2024"
               software="Unity, C#, Blender"
-              image={"public/images/briknite_img1.jpeg"}
+              image={"/images/briknite_img1.jpeg"}
             />
           </FilterableItem>
 
