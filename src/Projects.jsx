@@ -285,10 +285,13 @@ export default function App() {
           <FilterableItem tags={["game_dev", "cad", "electronics"]} activeIds={activeIds}>
             <ProjectCard
               title="Beat Saber Controller"
-              description="Designed and 3D-printed custom game controllers, integrating Arduino hardware with a Unity game."
+              description="Designed and 3D-printed custom wireless motion controllers to play a custom version of the Beat Saber video game."
               tags={["game_dev", "cad", "electronics"]}
               date="May 2026 - Present"
               software="Unity, Blender, Arduino"
+              image={"/images/beat_saber_demo.gif"}
+              link="https://github.com/skyha27/beat-saber-game"
+              linkText="Github"
             />
           </FilterableItem>
 
