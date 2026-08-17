@@ -13,7 +13,7 @@ export default function About() {
 
         <div style={{ flex: 1, minWidth: 200 }}>
           <img
-            src="/images/sky.jpeg"
+            src="/images/sky.webp"
             alt="Skyler Hall"
             style={{ width: '100%', height: 'auto', borderRadius: 200 }}
           />
