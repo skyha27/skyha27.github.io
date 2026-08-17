@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import './projects.css'
 
+const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 // Small inline icons so we don't depend on any icon library
 function ChevronDownIcon({ className = "" }) {
   return (
@@ -271,7 +273,7 @@ function useInView(options) {
 }
 
 function LazyMedia({ media, title }) {
-  const [ref, inView] = useInView({ rootMargin: "200px 0px" }); // start loading a bit before it's on screen
+  const [ref, inView] = useInView({ rootMargin: "400px 0px" });
   const isImage = media?.type === "image";
 
   return (
@@ -280,14 +282,10 @@ function LazyMedia({ media, title }) {
       className="media-frame"
       style={{
         width: "100%",
-        aspectRatio: "2 / 1", // reserves space up front -> no layout shift, keeps cards aligned
-        borderRadius: "0",
+        aspectRatio: "2 / 1",
         marginTop: "0.5rem",
         marginBottom: "0.5rem",
         overflow: "hidden",
-        // Images get a transparent frame so nothing shows behind the
-        // uncropped picture; videos keep a placeholder color since they
-        // still fill the frame edge-to-edge.
       }}
     >
       {inView && media?.type === "video" && (
@@ -296,12 +294,21 @@ function LazyMedia({ media, title }) {
           loop
           muted
           playsInline
-          preload="metadata"
+          preload="auto"
           poster={media.poster}
-          style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            display: "block",
+          }}
         >
-          {media.webm && <source src={media.webm} type="video/webm" />}
-          <source src={media.mp4} type="video/mp4" />
+          {media.webm && (
+            <source src={media.webm} type="video/webm" />
+          )}
+          {media.mp4 && (
+            <source src={media.mp4} type="video/mp4" />
+          )}
         </video>
       )}
 
@@ -311,27 +318,27 @@ function LazyMedia({ media, title }) {
           alt={media.alt || title}
           loading="lazy"
           decoding="async"
-          // "contain" (instead of "cover") renders the entire image
-          // uncropped within the reserved frame, keeping cards aligned.
-          style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }}
-        />
-      )}
-
-      {inView && !media && (
-        // No media provided yet — keep the placeholder box instead of a broken image icon.
-        <div
           style={{
             width: "100%",
             height: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#9CA3AF",
-            fontSize: "0.75rem",
+            objectFit: "contain",
+            display: "block",
           }}
-        >
-          Media coming soon
-        </div>
+        />
+      )}
+
+      {!inView && media?.poster && (
+        <img
+          src={media.poster}
+          alt=""
+          aria-hidden="true"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            display: "block",
+          }}
+        />
       )}
     </div>
   );
@@ -442,8 +449,8 @@ export default function App() {
             software="Unity, Blender, Arduino, ESP32"
             media={{
               type: "video",
-              webm: "/images/beat_saber.webm",
-              poster: "/images/beat_saber.jpg",
+              webm: asset("images/beat_saber.webm"),
+              poster: asset("images/beat_saber.jpg"),
             }}
             link="https://github.com/skyha27/beat-saber-game"
             linkText="Github"
@@ -459,8 +466,8 @@ export default function App() {
             software="Unity, C#"
             media={{
               type: "video",
-              webm: "/images/mesh_slicer.webm",
-              poster: "/images/mesh_slicer_demo-poster.jpg",
+              webm: asset("images/mesh_slicer.webm"),
+              poster: asset("images/mesh_slicer_demo-poster.jpg"),
             }}
             link="https://github.com/skyha27/mesh-slicer-2026-05-23_11-52-17"
             linkText="Github"
@@ -476,7 +483,7 @@ export default function App() {
             software="Maya, Python"
             media={{
               type: "image",
-              webp: "public/images/maya_project.webp",
+              webp: "/images/maya_project.webp",
               alt: "Maya Render Queue Tool UI",
             }}
             link="https://github.com/skyha27/Maya-Render-Queue-Tool"
@@ -510,8 +517,8 @@ export default function App() {
             software="C++, OpenGL, GLSL"
             media={{
               type: "video",
-              webm: "/images/fire_sim.webm",
-              poster: "/images/fire_sim_demo-poster.jpg",
+              webm: asset("images/fire_sim.webm"),
+              poster: asset("images/fire_sim_demo-poster.jpg"),
             }}
           />
         </FilterableItem>
