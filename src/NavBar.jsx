@@ -5,7 +5,7 @@ const NAV_LINKS = [
   { label: 'About', href: '/about' },
   { label: 'Projects', href: '/projects' },
   { label: 'Sketchbook', href: '/portfolio' },
-  // { label: 'Reel', href: 'https://vimeo.com/1148496002?fl=pl&fe=ti', external: true },
+  { label: 'Demo Reel', href: 'https://vimeo.com/1220650110?share=copy&fl=sv&fe=ci', external: true },
 ]
 
 export default function NavBar({ name = 'Your Name' }) {
