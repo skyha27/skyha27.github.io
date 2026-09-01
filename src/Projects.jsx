@@ -446,7 +446,7 @@ export default function App() {
             description="Designed and 3D-printed custom wireless motion controllers to play a custom version of the Beat Saber video game."
             tags={["game_dev", "cad", "electronics"]}
             date="May 2026 - Aug 2026"
-            software="Unity, Blender, Arduino, ESP32"
+            software="Fusion360, Unity, Blender, Arduino, ESP32"
             media={{
               type: "video",
               webm: asset("images/beat_saber.webm"),
@@ -592,7 +592,7 @@ export default function App() {
             title="Briknite"
             description="Online multiplayer video game. Worked on player and gameplay scripts in addition to creating custom player animations."
             tags={["game_dev"]}
-            date="Aug 2024 - Dec 2024"
+            date="June 2024 - Dec 2024"
             software="Unity, C#, Blender"
             media={{
               type: "image",
